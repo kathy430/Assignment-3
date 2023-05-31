@@ -49,14 +49,14 @@ function Cube(gl, vertexShaderId, fragmentShaderId) {
     //
 
     let positions = [
-        0.0, 0.0, 0.0,   // vertex 0
-        0.0, 1.0, 0.0,   // vertex 1
-        1.0, 1.0, 0.0,   // vertex 2
-        1.0, 0.0, 0.0,   // vertex 3
-        0.0, 0.0, -1.0,  // vertex 4
-        0.0, 1.0, -1.0,  // vertex 5
-        1.0, 1.0, -1.0,  // vertex 6
-        1.0, 0.0, -1.0   // vertex 7
+        -0.5, -0.5, 0.0,   // vertex 0
+        -0.5, 0.5, 0.0,   // vertex 1
+        0.5, 0.5, 0.0,   // vertex 2
+        0.5, -0.5, 0.0,   // vertex 3
+        -0.5, -0.5, -1.0,  // vertex 4
+        -0.5, 0.5, -1.0,  // vertex 5
+        0.5, 0.5, -1.0,  // vertex 6
+        0.5, -0.5, -1.0   // vertex 7
     ];
 
     let indices = [

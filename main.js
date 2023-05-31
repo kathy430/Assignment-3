@@ -14,6 +14,9 @@ function render() {
     // clear canvas
     gl.clear(gl.COLOR_BUFFER_BIT);
 
+    // translate to the middle of viewport
+    
+
     cube.render();
 }
 
