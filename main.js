@@ -10,17 +10,14 @@ function init() {
 
     cube = new Cube(gl, "Cube-vertex-shader", "Cube-fragment-shader");
     
-    requestAnimationFrame(render);
+    render();
 }
 
 function render() {
     // clear canvas
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-    // translate to the middle of viewport
-    
-
-    cube.render();
+    requestAnimationFrame(cube.render);
 }
 
 window.onload = init;
