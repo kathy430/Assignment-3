@@ -5,14 +5,17 @@ function init() {
     // clear canvas to black
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
+    // enable depth buffer
+    gl.enable(gl.DEPTH_TEST);
+
     cube = new Cube(gl, "Cube-vertex-shader", "Cube-fragment-shader");
     
-    render()
+    requestAnimationFrame(render);
 }
 
 function render() {
     // clear canvas
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     // translate to the middle of viewport
     
