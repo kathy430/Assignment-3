@@ -125,7 +125,7 @@ function Cube(gl, vertexShaderId, fragmentShaderId) {
         //   we divide the number of indices by two to render each
         //   part separately
         //
-        gl.drawElements(gl.POINTS, count, indices.type, 0);
+        gl.drawElements(gl.TRIANGLES, count, indices.type, 0);
 
         // Finally, reset our rendering state so that other objects we
         //   render don't try to use the Cone's data
