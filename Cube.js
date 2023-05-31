@@ -92,6 +92,15 @@ function Cube(gl, vertexShaderId, fragmentShaderId) {
         "aPosition", 3, gl.FLOAT);
     indices = new Indices(gl, indices);
 
+    // manage uniforms
+    uniforms = {
+        MV : gl.getUniformLocation(this.program, "MV"),
+        P : gl.getUniformLocation(this.program, "P")
+    };
+
+    this.P = mat4();
+    this.MV = mat4();
+
     // Create a render function that can be called from our main application.
     //   In this case, we're using JavaScript's "closure" feature, which
     //   automatically captures variable values that are necessary for this
@@ -101,6 +110,9 @@ function Cube(gl, vertexShaderId, fragmentShaderId) {
     //   automatically saved so that calls to render() succeed.
     // 
     this.render = function () {
+        gl.uniformMatrix4fv(uniforms.MV, false, flatten(this.MV));
+        gl.uniformMatrix4fv(uniforms.P, false, flatten(this.P));
+
         // Enable our shader program
         gl.useProgram(shaderProgram);
 
