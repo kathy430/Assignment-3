@@ -15,7 +15,7 @@ function init() {
     cube = new Cube(gl, "Cube-vertex-shader", "Cube-fragment-shader");
 
     cube.P = perspective(100, aspect, 0, -2);
-    cube.MV = translate(-1.0, -1.0, 0.0); 
+    cube.MV = 
     
     render();
 }
@@ -26,7 +26,6 @@ function render() {
 
     time += 0.1;
 
-    cube.MV(mult())
 
     cube.render();
     requestAnimationFrame(render);
